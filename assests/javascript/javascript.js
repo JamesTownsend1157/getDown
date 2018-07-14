@@ -15,7 +15,7 @@ localStorage.setItem("lats", mapdatalat);
  //create function for ajax data call
  function concert(){
      
-     var queryURL = "https://api.jambase.com/events?zipCode=" + zip +"&radius=20page=0&api_key=7c6rx23qgt3vbr9abs6s6757"
+     var queryURL = "https://api.jambase.com/events?zipCode=" + zip +"&radius=20page=0&api_key=6achgdq5gg446kqwabfrubvn"
  
      $.ajax({
          url: queryURL,
@@ -65,13 +65,21 @@ localStorage.setItem("lats", mapdatalat);
 
           function GetMap() {
               // Initialize the map
+              var lon = mapdatalat[0];
+              var lat = mapdatalong[0];
              
 
               map = new Microsoft.Maps.Map(document.getElementById("myMap"),
                          { credentials: "AtWJG1uzq4rqQaftoe2MQVzNJN2SVic1QXgBO-5oaJsBRaHC2osRfoUKbvYBordM" });
+            
+              map.setView({
+                  center: new Microsoft.Maps.Location(lon, lat),
+                  zoom: 7
+              })
 
               dataLayer = new Microsoft.Maps.EntityCollection();
               map.entities.push(dataLayer);
+              
 
               var infoboxLayer = new Microsoft.Maps.EntityCollection();
               map.entities.push(infoboxLayer);

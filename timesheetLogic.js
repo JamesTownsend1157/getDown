@@ -1,13 +1,6 @@
 // Steps to complete:
 
-// 1. Initialize Firebase
-// 2. Create button for adding new employees - then update the html + update the database
-// 3. Create a way to retrieve employees from the employee database.
-// 4. Create a way to calculate the months worked. Using difference between start and current time.
-//    Then use moment.js formatting to set difference in months.
-// 5. Calculate Total billed
 
-// 1. Initialize Firebase
 var config = {
     apiKey: "AIzaSyA6-pBWvjvApxxrxAj-eoBKgPm1Xu6B-N0",
     authDomain: "denver-18010.firebaseapp.com",
@@ -21,7 +14,7 @@ var config = {
   
   var database = firebase.database();
   
-  // 2. Button for adding Employees
+  //click event to add chat
   $("#add-employee-btn").on("click", function(event) {
     event.preventDefault();
   
@@ -36,7 +29,7 @@ var config = {
       role: empRole,
     };
   
-    // Uploads employee data to the database
+    
     database.ref().push(newEmp);
   
     // Logs everything to console
@@ -44,7 +37,7 @@ var config = {
     console.log(newEmp.role);
     
   
-    alert("Employee successfully added");
+    alert("Your message is now live!");
   
     // Clears all of the text-boxes
     $("#employee-name-input").val("");
@@ -68,20 +61,15 @@ var config = {
     
     // Create the new row
     var newRow = $("<div>").append(
-      $("<div>").text("________________________"), 
+       
       $("<div>").text(empName),
       $("<div>").text(empRole),
+      $("<div>").text("**********************************************************************"),
+      
     );
   
     // Append the new row to the table
     $("#employee-table > tbody").append(newRow);
   });
   
-  // Example Time Math
-  // -----------------------------------------------------------------------------
-  // Assume Employee start date of January 1, 2015
-  // Assume current date is March 1, 2016
-  
-  // We know that this is 15 months.
-  // Now we will create code in moment.js to confirm that any attempt we use meets this test case
   

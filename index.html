@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html class="first-page is-clipped	">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Concert Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <link rel="stylesheet" href="assests/css/styles.css">
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script defer src="assests\javascript\javascript.js"></script>
+</head>
+
+<body>
+
+  <section class="hero first-section">
+    <div class="hero-head">
+      <header class="navbar is-transparent">
+        <div class="container">
+          <div class="navbar-brand">
+            <header class="navbar-item is-size-1 has-text-warning has-text-weight-semibold	">
+              GetDown
+            </header>
+            <span class="navbar-burger burger" data-target="navbarMenuHeroC">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenuHeroC" class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item has-text-warning">
+                Home
+              </a>
+              <a class="navbar-item has-text-white">
+                Examples
+              </a>
+              <a class="navbar-item has-text-white">
+                Documentation
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+  </section>
+
+    
+ 
+  <div class="level">
+    <div class="level-item has-text-centered">
+      <h1 class="title has-text-white is-size-1 has-text-weight-semibold		">
+        Find a Concert in Your City
+      </h1>
+    </div>
+  </div>
+  <div class="level">
+    <div class="level-item has-text-centered">
+      <div class="field has-addons">
+        <div class="control">
+          <input id="input1" class="input is-large" type="text" name="zipcode" placeholder="Enter Zipcode">
+        </div>
+        <div onload="GetMap();" id="search" class="control">
+          <a class="button is-large is-warning" id="mybutton">
+            <span class="icon is-medium is-white">
+              <i class="fas fa-search"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+        <!-- <div class="field is-centered">
+          <div class="control">
+            
+              <input class="input is-large zip" type="text" placeholder="Enter ZipCode">
+            
+          </div>
+        </div> -->
+
+      
+    
+
+    <!-- Hero footer: will stick at the bottom -->
+    <!-- <div class="hero-foot">
+      <nav class="tabs is-boxed is-fullwidth">
+        <div class="container">
+          <ul>
+            <li class="is-active">
+              <a>Overview</a>
+            </li>
+            <li>
+              <a>Modifiers</a>
+            </li>
+            <li>
+              <a>Grid</a>
+            </li>
+            <li>
+              <a>Elements</a>
+            </li>
+            <li>
+              <a>Components</a>
+            </li>
+            <li>
+              <a>Layout</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </section> -->
+
+
+
+
+
+
+
+</body>
+
+</html>

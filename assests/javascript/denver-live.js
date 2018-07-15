@@ -1,6 +1,3 @@
-// Steps to complete:
-
-
 var config = {
     apiKey: "AIzaSyA6-pBWvjvApxxrxAj-eoBKgPm1Xu6B-N0",
     authDomain: "denver-18010.firebaseapp.com",
@@ -62,9 +59,9 @@ var config = {
     // Create the new row
     var newRow = $("<div>").append(
        
-      $("<div>").text(empName),
-      $("<div>").text(empRole),
-      $("<div>").text("**********************************************************************"),
+      $("<div class='pad has-text-danger has-text-weight-bold is-size-6'>").text(empName),
+      $("<div class='pad'>").text(empRole),
+      $("<div>").append("<hr>")
       
     );
   

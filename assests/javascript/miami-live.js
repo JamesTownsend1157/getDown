@@ -59,9 +59,9 @@ database.ref().on("child_added", function(childSnapshot) {
   // Create the new row
   var newRow = $("<div>").append(
      
-    $("<div>").text(empName),
-    $("<div>").text(empRole),
-    $("<div>").text("**********************************************************************"),
+    $("<div class='pad has-text-danger has-text-weight-bold is-size-6'>").text(empName),
+    $("<div class='pad'>").text(empRole),
+    $("<div>").append("<hr>")
     
   );
 

@@ -102,16 +102,17 @@ margin: 0;
 } */
 
 .scroll {
-  max-height: 95%;
+  max-height: 90%;
   overflow-y: scroll;
   overflow-x: hidden;
   margin-top: 6px;
+  
 }
 
-.scroll::-webkit-scrollbar-thumb {
+/* .scroll::-webkit-scrollbar-thumb {
 
 
-}
+} */
 
 .ok {
   padding-top: 0rem;
@@ -126,7 +127,33 @@ margin: 0;
   padding-bottom: 0.75rem;
   padding-left: 0.75rem
 }
-.newcitychat{
+/* .newcitychat{
   margin-bottom: 35px;
+} */
+
+/* .denver {
+  background-image: linear-gradient(to bottom, rgba(37, 37, 37, 0.6) 0%,rgba(37,37,37,0.6) 100%), url('../images/concert.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+} */
+
+.chatter {
+  max-height: 275px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+ 
+}
+
+hr {
+  margin: 0.5rem;
+  background-color: black;
+  
+}
+
+.pad {
+  padding-left:  .4rem;
+  margin-top: .4rem;
 }
 

@@ -73,7 +73,7 @@ localStorage.setItem("lats", mapdatalat);
         var q2 = $("<a class='has-text-info is-size-5'>").append("<strong>Buy Tickets Now</strong>" + "<br>");
             q2.attr("href", venURL);
             secondDiv.append(q2);
-        var q3 = $("<a class='has-text-danger is-size-5'>").append("<strong>Who The Fuck is This</strong>" + "<br>");
+        var q3 = $("<a class='has-text-danger is-size-5'>").append("<strong>Who The **** is This</strong>" + "<br>");
             q3.attr("href", "https://www.allmusic.com/search/artists/" + conartist);
             secondDiv.append(q3);
         var q4 = $("<a id='more-colors' class='is-size-5'>").append("<strong>Listen to a Song</strong>" );

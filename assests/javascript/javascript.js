@@ -28,7 +28,7 @@ localStorage.setItem("lats", mapdatalat);
  //create function for ajax data call
  function concert(){
      
-     var queryURL = "https://api.jambase.com/events?zipCode=" + zip +"&radius=20page=0&api_key=n96ekds4vd4mdejkkcmsvqcb"
+     var queryURL = "https://api.jambase.com/events?zipCode=" + zip +"&radius=20page=0&api_key=3s997h5redq4tgcupgfbwvj7"
  
      $.ajax({
          url: queryURL,
@@ -68,15 +68,15 @@ localStorage.setItem("lats", mapdatalat);
 
         var secondDiv = $("<div class='box'>");
             secondDiv.addClass("buy-tickets")
-        var q1 = $("<header class='is-size-4 has-text-weight-bold'>").append("<strong>Info</strong>");
+        var q1 = $("<header class='is-size-5 has-text-weight-bold'>").append("<strong>Info</strong>");
             secondDiv.append(q1);
-        var q2 = $("<a class='has-text-info is-size-4'>").append("<strong>Buy Tickets Now</strong>" + "<br>");
+        var q2 = $("<a class='has-text-info is-size-5'>").append("<strong>Buy Tickets Now</strong>" + "<br>");
             q2.attr("href", venURL);
             secondDiv.append(q2);
-        var q3 = $("<a class='has-text-danger is-size-4'>").append("<strong>Who The Fuck is This</strong>" + "<br>");
+        var q3 = $("<a class='has-text-danger is-size-5'>").append("<strong>Who The Fuck is This</strong>" + "<br>");
             q3.attr("href", "https://www.allmusic.com/search/artists/" + conartist);
             secondDiv.append(q3);
-        var q4 = $("<a id='more-colors' class='is-size-4'>").append("<strong>Listen to a Song</strong>" );
+        var q4 = $("<a id='more-colors' class='is-size-5'>").append("<strong>Listen to a Song</strong>" );
             q4.attr("href", "https://www.youtube.com/results?search_query=" + conartist);
             secondDiv.append(q4);
 

@@ -28,7 +28,7 @@ localStorage.setItem("lats", mapdatalat);
  //create function for ajax data call
  function concert(){
      
-     var queryURL = "https://api.jambase.com/events?zipCode=" + zip +"&radius=20page=0&api_key=n96ekds4vd4mdejkkcmsvqcb"
+     var queryURL = "https://api.jambase.com/events?zipCode=" + zip +"&radius=20page=0&api_key=43r3evt8kxbm266uphxmmyxy"
  
      $.ajax({
          url: queryURL,
@@ -85,7 +85,7 @@ localStorage.setItem("lats", mapdatalat);
           var tickitdata = $("#buy").append(secondDiv);
    
          }
-         GetMap();
+        GetMap();
          var lonitutesOne = localStorage.getItem("lons");
         
 
@@ -320,7 +320,7 @@ localStorage.setItem("lats", mapdatalat);
  };
 console.log(mapdatalat);
 concert();
-GetMap();
+
 //  var lonitutesOne = localStorage.getItem("lons");
 //          console.log(lonitutesOne);
 

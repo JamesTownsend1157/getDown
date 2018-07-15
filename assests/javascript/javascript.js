@@ -2,6 +2,19 @@ $("#mybutton").on("click", function(events){
     sessionStorage.setItem("userzip", $("#input1").val().trim());
     location.href = "Page-2-template.html";
 })
+
+$("#input1").on("enterKey",function(e){
+    sessionStorage.setItem("userzip", $("#input1").val().trim());
+    location.href = "Page-2-template.html";
+});
+
+ $("#input1").keyup(function(e){
+     if(e.keyCode == 13)
+     {
+         $(this).trigger("enterKey");
+     }
+});
+ 
 var zip = sessionStorage.getItem("userzip");
 var mapdatalong = [];
 var mapdatalat = [];
@@ -15,7 +28,7 @@ localStorage.setItem("lats", mapdatalat);
  //create function for ajax data call
  function concert(){
      
-     var queryURL = "https://api.jambase.com/events?zipCode=" + zip +"&radius=20page=0&api_key=6achgdq5gg446kqwabfrubvn"
+     var queryURL = "https://api.jambase.com/events?zipCode=" + zip +"&radius=20page=0&api_key=n96ekds4vd4mdejkkcmsvqcb"
  
      $.ajax({
          url: queryURL,
@@ -40,23 +53,36 @@ localStorage.setItem("lats", mapdatalat);
 
 
          
-         var newDiv = $("<div class='box'>");
-           newDiv.addClass("music-data")
-         var p1 = $("<h1 class='is-size-4 has-text-weight-semibold'>").append("Artist: " + conartist);
-         newDiv.append(p1);
-         var p2 = $("<p>").append("<strong>Date:</strong> " + condates);
-         newDiv.append(p2);
-         var p3 = $("<p>").append("<strong>Venue:</strong> " + convenue);
-         newDiv.append(p3);
-         var p4 = $("<p>").append("<strong>Address:</strong> " + conaddress);
-         newDiv.append(p4);
-         var p5 = $("<p>").append("<strong>City:</strong> " + concity);
-         newDiv.append(p5);
-         var p6 = $("<a class='is-pulled-right has-text-info'>").append("<strong>Buy Tickets Now</strong> ");
-         p6.attr("href", venURL);
- 
-         newDiv.append(p6);
+        var newDiv = $("<div class='box'>");
+            newDiv.addClass("music-data")
+        var p1 = $("<header class='is-size-4 has-text-weight-bold'>").append(conartist);
+            newDiv.append(p1);
+        var p2 = $("<p class='is-size-5'>").append("<strong>Date:</strong> " + condates);
+            newDiv.append(p2);
+        var p3 = $("<p class='is-size-5'>").append("<strong>Venue:</strong> " + convenue);
+            newDiv.append(p3);
+        var p4 = $("<p class='is-size-5'>").append("<strong>Address:</strong> " + conaddress);
+            newDiv.append(p4);
+        var p5 = $("<p class='is-size-5'>").append("<strong>City:</strong> " + concity);
+            newDiv.append(p5);
+
+        var secondDiv = $("<div class='box'>");
+            secondDiv.addClass("buy-tickets")
+        var q1 = $("<header class='is-size-4 has-text-weight-bold'>").append("<strong>Info</strong>");
+            secondDiv.append(q1);
+        var q2 = $("<a class='has-text-info is-size-4'>").append("<strong>Buy Tickets Now</strong>" + "<br>");
+            q2.attr("href", venURL);
+            secondDiv.append(q2);
+        var q3 = $("<a class='has-text-danger is-size-4'>").append("<strong>Who The Fuck is This</strong>" + "<br>");
+            q3.attr("href", "https://www.allmusic.com/search/artists/" + conartist);
+            secondDiv.append(q3);
+        var q4 = $("<a id='more-colors' class='is-size-4'>").append("<strong>Listen to a Song</strong>" );
+            q4.attr("href", "https://www.youtube.com/results?search_query=" + conartist);
+            secondDiv.append(q4);
+
           var conertdata = $("#new-data").append(newDiv);
+
+          var tickitdata = $("#buy").append(secondDiv);
    
          }
          GetMap();

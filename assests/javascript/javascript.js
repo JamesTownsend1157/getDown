@@ -85,7 +85,7 @@ localStorage.setItem("lats", mapdatalat);
           var tickitdata = $("#buy").append(secondDiv);
    
          }
-         GetMap();
+        GetMap();
          var lonitutesOne = localStorage.getItem("lons");
         
 
@@ -320,7 +320,7 @@ localStorage.setItem("lats", mapdatalat);
  };
 console.log(mapdatalat);
 concert();
-GetMap();
+
 //  var lonitutesOne = localStorage.getItem("lons");
 //          console.log(lonitutesOne);
 

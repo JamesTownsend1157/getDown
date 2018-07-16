@@ -28,7 +28,7 @@ localStorage.setItem("lats", mapdatalat);
  //create function for ajax data call
  function concert(){
      
-     var queryURL = "https://api.jambase.com/events?zipCode=" + zip +"&radius=20page=0&api_key=n96ekds4vd4mdejkkcmsvqcb"
+     var queryURL = "https://api.jambase.com/events?zipCode=" + zip +"&radius=20page=0&api_key=42xsteaaykzhzxmen6j4922q"
  
      $.ajax({
          url: queryURL,

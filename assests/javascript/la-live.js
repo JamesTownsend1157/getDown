@@ -34,9 +34,6 @@ $("#add-employee-btn").on("click", function(event) {
   console.log(newEmp.name);
   console.log(newEmp.role);
   
-
-  alert("Your message is now live!");
-
   // Clears all of the text-boxes
   $("#employee-name-input").val("");
   $("#role-input").val("");

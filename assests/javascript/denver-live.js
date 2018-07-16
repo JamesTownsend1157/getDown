@@ -32,9 +32,6 @@ var config = {
     // Logs everything to console
     console.log(newEmp.name);
     console.log(newEmp.role);
-    
-  
-    alert("Your message is now live!");
   
     // Clears all of the text-boxes
     $("#employee-name-input").val("");

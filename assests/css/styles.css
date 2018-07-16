@@ -157,3 +157,8 @@ hr {
   margin-top: .4rem;
 }
 
+#employee-table {
+  table-layout: fixed;
+  word-wrap: break-word;
+}
+
